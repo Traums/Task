@@ -1,0 +1,6 @@
+create table users(id long, 
+name String,
+level int, 
+ultimate String);
+
+INSERT INTO users (id,name,level,ultimate) VALUES (3,'Oleg',3,'?');
