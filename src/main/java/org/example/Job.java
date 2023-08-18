@@ -7,8 +7,8 @@ import java.util.List;
 public class Job {
 
     void run() {
-        Hero hero = new Hero(1,"Vova",1,"-");
-        insertRecord("users",hero);
+        Hero user = new Hero(1,"Vova",1,"-");
+        insertRecord("users",user);
         readTable("users");
     }
 

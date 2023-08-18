@@ -53,8 +53,11 @@ public class SqliteWorker {
         return listHero;
     }
     void output(List<Hero> heroCol){
-        for(int i = 0;i<heroCol.size();i++){
-            System.out.println(heroCol.get(i).getName());
+        for (Hero hero : heroCol) {
+            System.out.println(hero.getId() + " "
+                    + hero.getName() + " "
+                    + hero.getLevel() + " "
+                    + hero.getUltimate());
         }
     }
 

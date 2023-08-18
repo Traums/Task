@@ -1,17 +1,19 @@
 package example2;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.experimental.SuperBuilder;
+import lombok.NoArgsConstructor;
 import org.example.Hero;
 
-@Data
-@AllArgsConstructor
-public class Pudge extends Hero {
-    Pudge(long id,String name,int level, String ultimate){
-        super( id, name,level, ultimate );
-    }
+import java.io.Serializable;
 
+@Data
+@NoArgsConstructor
+public class Pudge extends Hero implements Serializable {
+
+    public Pudge(int id, String name , int level, String ultimate) {
+        super.setId(id);
+        super.setName(name);
+        super.setLevel(level);
+        super.setUltimate(ultimate);
+    }
 }
