@@ -7,14 +7,13 @@ import java.util.List;
 public class Job {
 
     void run() {
-
-        insertRecord("users",1,"Vova",1,"-");
+        Hero hero = new Hero(1,"Vova",1,"-");
+        insertRecord("users",hero);
         readTable("users");
     }
 
-    private static void insertRecord(String dbName,int id, String name,int level,String ultimate) {
+    private static void insertRecord(String dbName,Hero hero) {
         try {
-            Hero hero = new Hero(id,name,level,ultimate);
             SqliteWorker worker = new SqliteWorker(dbName);
             worker.insert(dbName,hero);
         } catch (SQLException e) {
