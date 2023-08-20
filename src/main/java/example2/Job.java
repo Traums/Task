@@ -3,12 +3,12 @@ package example2;
 import java.util.List;
 
 public class Job {
-    private Serialize serial;
+    public Serialize serial;
     Job(){
-        Serialize serial = new Serialize();
+        this.serial = new Serialize();
     }
     void run(){
-        Pudge pudge = new Pudge(1,"Pudge",1,"&");
+        Pudge pudge = new Pudge(1,"Pudge",1,"&","cat");
 
         serializeRecord("DB",pudge);
         this.serial.output(readAll("DB"));
