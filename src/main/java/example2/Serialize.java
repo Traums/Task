@@ -19,9 +19,9 @@ public class Serialize {
 //        catch(Exception ex){
 //            System.out.println(ex.getMessage());
 //        }
-        try{
-            FileWriter writer = new FileWriter("./serialDB/" + filename + ".txt",true);
+        try(FileWriter writer = new FileWriter("./serialDB/" + filename + ".txt",true);){
             String data = String.join(" ", String.valueOf(pud.getId()),pud.getName(),String.valueOf(pud.getLevel()),pud.getUltimate());
+            data += "\n";
             writer.write(data);
         }catch (IOException ex){
             ex.printStackTrace();
@@ -38,8 +38,7 @@ public class Serialize {
 //
 //            System.out.println(ex.getMessage());
 //        }
-        try{
-            BufferedReader reader = new BufferedReader(new FileReader("./serialDB/" + filename + ".txt"));
+        try(BufferedReader reader = new BufferedReader(new FileReader("./serialDB/" + filename + ".txt"));){
             String lineRecord = reader.readLine();
             while (lineRecord != null){
                 Pudge pud = new Pudge();
@@ -49,6 +48,7 @@ public class Serialize {
                 pud.setLevel(Integer.parseInt(parts[2]));
                 pud.setUltimate(parts[3]);
                 pudgeCol.add(pud);
+                lineRecord = reader.readLine();
             }
         }
         catch ( IOException e) {

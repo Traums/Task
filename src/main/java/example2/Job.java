@@ -8,7 +8,7 @@ public class Job {
         this.serial = new Serialize();
     }
     void run(){
-        Pudge pudge = new Pudge(1,"Pudge",1,"&","cat");
+        Pudge pudge = new Pudge(1,"Pudge",1,"&");
 
         serializeRecord("DB",pudge);
         this.serial.output(readAll("DB"));

@@ -1,4 +1,4 @@
-package org.example;
+package example1;
 
 import java.sql.SQLException;
 import java.util.ArrayList;

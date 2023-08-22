@@ -1,9 +1,8 @@
-package org.example;
+package example1;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.SimpleTimeZone;
 
 
 public class SqliteWorker {
