@@ -4,7 +4,6 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class SqliteWorker {
         Connection con = null;
         String url;
@@ -38,10 +37,7 @@ public class SqliteWorker {
             ResultSet rs = stat.executeQuery(query);
             while (rs.next()){
                 Hero hero = new Hero();
-                hero.setId(rs.getInt("id"));
-                hero.setName(rs.getString("name"));
-                hero.setLevel(rs.getInt("level"));
-                hero.setUltimate(rs.getString("ultimate"));
+                formHero(hero, rs);
 
                 listHero.add(hero);
             }
@@ -51,6 +47,14 @@ public class SqliteWorker {
         }
         return listHero;
     }
+
+    private static void formHero(Hero hero, ResultSet rs) throws SQLException {
+        hero.setId(rs.getInt("id"));
+        hero.setName(rs.getString("name"));
+        hero.setLevel(rs.getInt("level"));
+        hero.setUltimate(rs.getString("ultimate"));
+    }
+
     void output(List<Hero> heroCol){
         for (Hero hero : heroCol) {
             System.out.println(hero.getId() + " "
