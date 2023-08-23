@@ -7,7 +7,8 @@ import java.util.List;
 public class Job {
 
     void run() {
-        Hero user = new Hero(1,"Vova",1,"-");
+//        Hero user = new Hero(1,"Vova",1,"-");
+        Hero user = new HeroBuilderImpl().setId(1).setName("Vova").setLevel(1).setUltimate("-").build();
         insertRecord("users",user);
         readTable("users");
     }
