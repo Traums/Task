@@ -4,11 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dd0e221-5e12-45d3-a8af-8d16d05af032" name="Changes" comment="Hibernate connection">
-      <change afterPath="$PROJECT_DIR$/src/main/java/example1/HeroBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example1/HeroBuilderImpl.java" afterDir="false" />
+    <list default="true" id="2dd0e221-5e12-45d3-a8af-8d16d05af032" name="Changes" comment="Builder pattern">
+      <change afterPath="$PROJECT_DIR$/src/main/java/example1/JobBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example1/JobBuilderImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example1/SqliteJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example1/SqliteWorkerBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example1/SqliteWorkerBuilderImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example2/SerializeJob.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example1/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example1/Job.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serialDB/DB.txt" beforeDir="false" afterPath="$PROJECT_DIR$/serialDB/DB.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sqlite/users.db" beforeDir="false" afterPath="$PROJECT_DIR$/sqlite/users.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example1/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example1/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example1/Job.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example1/SqliteWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example1/SqliteWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example2/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example2/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example2/Job.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example2/Serialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example2/Serializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example4/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example4/Job.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +30,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -73,7 +85,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.App4">
+  <component name="RunManager" selected="Application.App2">
     <configuration name="App1" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="example1.App" />
       <module name="Task" />
@@ -134,9 +146,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App1" />
         <item itemvalue="Application.App4" />
         <item itemvalue="Application.App3" />
-        <item itemvalue="Application.App1" />
       </list>
     </recent_temporary>
   </component>
@@ -162,6 +174,9 @@
       <workItem from="1692721164982" duration="8319000" />
       <workItem from="1692765297022" duration="16000" />
       <workItem from="1692766943756" duration="638000" />
+      <workItem from="1692776571763" duration="3325000" />
+      <workItem from="1692794487770" duration="9435000" />
+      <workItem from="1692815722249" duration="782000" />
     </task>
     <task id="LOCAL-00001" summary="Task 2">
       <option name="closed" value="true" />
@@ -187,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692729062747</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Builder pattern">
+      <option name="closed" value="true" />
+      <created>1692776624664</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1692776624664</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,16 +221,12 @@
     <MESSAGE value="Task 2" />
     <MESSAGE value="Task 4" />
     <MESSAGE value="Hibernate connection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hibernate connection" />
+    <MESSAGE value="Builder pattern" />
+    <option name="LAST_COMMIT_MESSAGE" value="Builder pattern" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/example2/Job.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/example3/Job.java</url>
           <line>10</line>

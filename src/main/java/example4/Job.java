@@ -14,7 +14,7 @@ public class Job {
         try {
             this.worker = new MySqlWorker("xxi");
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println("Ошибка подключения к БД:" + e.getMessage());;
         }
     }
 

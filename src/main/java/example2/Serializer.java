@@ -9,8 +9,12 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
-public class Serialize {
-    void write(String filename, Pudge pud){
+public class Serializer {
+    String filename;
+    Serializer(String filename){
+        this.filename = filename;
+    }
+    void serialize( Pudge pud) {
 //        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("./serialDB/" + filename + ".data")))
 //        {
 //            oos.writeObject(pud);
@@ -19,16 +23,18 @@ public class Serialize {
 //        catch(Exception ex){
 //            System.out.println(ex.getMessage());
 //        }
-        try(FileWriter writer = new FileWriter("./serialDB/" + filename + ".txt",true);){
+        try{
+            FileWriter writer = new FileWriter("./serialDB/" + this.filename + ".txt",true);
             String data = String.join(" ", String.valueOf(pud.getId()),pud.getName(),String.valueOf(pud.getLevel()),pud.getUltimate());
             data += "\n";
             writer.write(data);
-        }catch (IOException ex){
-            ex.printStackTrace();
+            writer.close();
+        }catch (IOException e){
+            System.out.println("Ошибка сериализации: " + e.getMessage());;
         }
     }
-    List<Pudge> read(String filename){
-        List<Pudge> pudgeCol = new ArrayList<>();
+    List<Pudge> deserialize(){
+        List<Pudge> pudgeList = new ArrayList<>();
 //        try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("./serialDB/" + filename + ".data")))
 //        {
 //            Pudge pudTemp = (Pudge) ois.readObject();
@@ -38,30 +44,28 @@ public class Serialize {
 //
 //            System.out.println(ex.getMessage());
 //        }
-        try(BufferedReader reader = new BufferedReader(new FileReader("./serialDB/" + filename + ".txt"));){
+        try{
+            BufferedReader reader = new BufferedReader(new FileReader("./serialDB/" + this.filename + ".txt"));
             String lineRecord = reader.readLine();
             while (lineRecord != null){
-                Pudge pud = new Pudge();
-                String[] parts = lineRecord.split(" ");
-                pud.setId(Long.parseLong(parts[0]));
-                pud.setName(parts[1]);
-                pud.setLevel(Integer.parseInt(parts[2]));
-                pud.setUltimate(parts[3]);
-                pudgeCol.add(pud);
+                Pudge pud = mapToPudge(lineRecord);
+                pudgeList.add(pud);
                 lineRecord = reader.readLine();
             }
         }
         catch ( IOException e) {
-            throw new RuntimeException(e);
+            System.out.println("Ошибка десерелизации: " + e.getMessage());
         }
-        return pudgeCol;
+        return pudgeList;
     }
-    void output(List<Pudge> pudgeCol){
-        for (Pudge pudge : pudgeCol) {
-            System.out.println(pudge.getId() + " " +
-                    pudge.getName() + " " +
-                    pudge.getLevel() + " " +
-                    pudge.getUltimate());
-        }
+
+    private  Pudge mapToPudge(String lineRecord) {
+        Pudge pud = new Pudge();
+        String[] parts = lineRecord.split(" ");
+        pud.setId(Long.parseLong(parts[0]));
+        pud.setName(parts[1]);
+        pud.setLevel(Integer.parseInt(parts[2]));
+        pud.setUltimate(parts[3]);
+        return pud;
     }
 }

@@ -2,7 +2,8 @@ package example2;
 
 public class App {
     public static void main(String[] args) {
-        Job job = new Job();
-        job.run();
+        SerializeJob serializeJob = new SerializeJob("DB");
+        serializeJob.serializePudge(new Pudge(2,"Pudge",2,"*"));
+        serializeJob.output(serializeJob.deserialize());
     }
 }
