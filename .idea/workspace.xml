@@ -4,23 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dd0e221-5e12-45d3-a8af-8d16d05af032" name="Changes" comment="Builder pattern">
-      <change afterPath="$PROJECT_DIR$/src/main/java/example1/JobBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example1/JobBuilderImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example1/SqliteJob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example1/SqliteWorkerBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example1/SqliteWorkerBuilderImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example2/SerializeJob.java" afterDir="false" />
+    <list default="true" id="2dd0e221-5e12-45d3-a8af-8d16d05af032" name="Changes" comment="Refactor task1,2">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serialDB/DB.txt" beforeDir="false" afterPath="$PROJECT_DIR$/serialDB/DB.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sqlite/users.db" beforeDir="false" afterPath="$PROJECT_DIR$/sqlite/users.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example1/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example1/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example1/Job.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example1/SqliteWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example1/SqliteWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example2/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example2/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example2/Job.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example2/Serialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example2/Serializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example4/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example4/Job.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example1/SqliteJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example1/SqliteJob.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,6 +164,10 @@
       <workItem from="1692776571763" duration="3325000" />
       <workItem from="1692794487770" duration="9435000" />
       <workItem from="1692815722249" duration="782000" />
+      <workItem from="1692850898022" duration="3450000" />
+      <workItem from="1692858260407" duration="5667000" />
+      <workItem from="1693064175013" duration="5000" />
+      <workItem from="1693142035847" duration="4381000" />
     </task>
     <task id="LOCAL-00001" summary="Task 2">
       <option name="closed" value="true" />
@@ -210,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692776624664</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Refactor task1,2">
+      <option name="closed" value="true" />
+      <created>1692850944142</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1692850944142</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +221,8 @@
     <MESSAGE value="Task 4" />
     <MESSAGE value="Hibernate connection" />
     <MESSAGE value="Builder pattern" />
-    <option name="LAST_COMMIT_MESSAGE" value="Builder pattern" />
+    <MESSAGE value="Refactor task1,2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor task1,2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

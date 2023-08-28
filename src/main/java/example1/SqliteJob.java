@@ -19,13 +19,12 @@ public class SqliteJob {
         }
     }
     public List<Hero> readTable(){
-        List<Hero> list = new ArrayList<>();
         try{
-            list = this.worker.readHeroes();
+            return this.worker.readHeroes();
         } catch (SQLException e) {
             System.out.println("Ошибка чтения записей из БД: " + e.getMessage());;
         }
-        return list;
+        return new ArrayList<>();
     }
     public void logHeroList(List<Hero> heroList){
         for (Hero hero : heroList) {
